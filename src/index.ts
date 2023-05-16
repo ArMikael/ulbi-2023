@@ -1,3 +1,3 @@
 import {fn} from "./test";
 
-fn(1324);
+fn(77787);
