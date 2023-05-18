@@ -7,3 +7,16 @@
 .app {
   font-size: 16px;
 }
+
+.navbar {
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: blanchedalmond;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin-right: 12px;
+}
