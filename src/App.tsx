@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
 import SpButton from "./components/ui/sp-button/spButton";
-import './styles.scss';
+import './styles/index.scss';
 import {MainPageAsync} from "./pages/MainPage/MainPage.async";
 import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
 
