@@ -5,7 +5,6 @@ const SpButton = () => {
     return (
         <div className={classes.spButtonContainer}>
             <button className={classes.spButton}>Click Me</button>
-            <button className={classes.kebabCaseClass}>Test</button>
         </div>
     );
 };

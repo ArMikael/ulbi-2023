@@ -4,8 +4,12 @@ import SpButton from "./components/ui/sp-button/spButton";
 import './styles/index.scss';
 import {MainPageAsync} from "./pages/MainPage/MainPage.async";
 import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
+import {useTheme} from "./theme/useTheme";
+
 
 const App = () => {
+    const { theme, toggleTheme } = useTheme();
+
     return (
         <div>
             <div className="navbar">
@@ -19,6 +23,8 @@ const App = () => {
                     <Route path={'/about'} element={<AboutPageAsync/>} />
                 </Routes>
             </Suspense>
+
+            <button onClick={toggleTheme}>Change Theme</button>
             <SpButton />
         </div>
     );
