@@ -10,3 +10,13 @@
   color: var(--primary-color);
   min-height: 100vh;
 }
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 20px;
+}
