@@ -1,9 +1,14 @@
 .navbar {
   display: flex;
-  height: 30px;
-  justify-content: center;
+  height: 60px;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
   background-color: blanchedalmond;
+
+  .navLinkPanel {
+    display: flex;
+  }
 
   .navLink {
     text-decoration: none;
