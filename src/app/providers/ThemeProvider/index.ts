@@ -1,7 +1,7 @@
-import { ThemeProvider } from "./ThemeProvider";
-import { useTheme } from "./useTheme";
+import { ThemeProvider } from './ThemeProvider';
+import { useTheme } from './useTheme';
 
 export {
-    ThemeProvider,
-    useTheme
+  ThemeProvider,
+  useTheme,
 };
