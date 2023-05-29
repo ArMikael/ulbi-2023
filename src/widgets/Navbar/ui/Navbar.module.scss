@@ -1,17 +1,17 @@
 .navbar {
-  display: flex;
-  height: var(--navbar-height);
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
-  background-color: var(--panels-bg-color);
-
-  .navLinkPanel {
     display: flex;
-  }
+    height: var(--navbar-height);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: var(--panels-bg-color);
 
-  .navLink {
-    text-decoration: none;
-    margin-right: 12px;
-  }
+    .navLinkPanel {
+        display: flex;
+    }
+
+    .navLink {
+        text-decoration: none;
+        margin-right: 12px;
+    }
 }
