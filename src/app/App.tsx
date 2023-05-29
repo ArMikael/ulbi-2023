@@ -1,5 +1,4 @@
-import React from 'react';
-import SpButton from "../components/ui/sp-button/spButton";
+import React, {Suspense} from 'react';
 import './styles/index.scss';
 import {classNames} from "shared/lib/classNames/classNames";
 import {AppRouter} from "app/providers/router";
@@ -12,11 +11,13 @@ const App = () => {
 
     return (
         <div className={ classNames('app', {}, [theme]) }>
-            <Navbar />
-            <div className="main-content">
-                <Sidebar />
-                <AppRouter />
-            </div>
+            <Suspense fallback="">
+                <Navbar />
+                <div className="main-content">
+                    <Sidebar />
+                    <AppRouter />
+                </div>
+            </Suspense>
         </div>
     );
 };
