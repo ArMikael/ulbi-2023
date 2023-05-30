@@ -29,7 +29,7 @@ module.exports = {
     'react/jsx-indent-props': [2, 4],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'i18next/no-literal-string': ['error', { markupOnly: true }],
-    'max-length': ['error', { ignoreComments: true }],
+    'max-len': ['error', { ignoreComments: true }],
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
