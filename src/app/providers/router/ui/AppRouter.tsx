@@ -7,14 +7,14 @@ const AppRouter = () => (
         <div className="page-wrapper">
             <Routes>
                 {
-                        Object.values(routeConfig).map(({ element, path }) => (
-                            <Route
-                                path={path}
-                                element={element}
-                                key={path}
-                            />
-                        ))
-                    }
+                    Object.values(routeConfig).map(({ element, path }) => (
+                        <Route
+                            path={path}
+                            element={element}
+                            key={path}
+                        />
+                    ))
+                }
             </Routes>
         </div>
     </Suspense>
