@@ -5,5 +5,8 @@
   "collapse": "Свернуть",
   "home": "Главная",
   "mainPage": "Главная страница",
-  "pageNotFound": "Страница не найдена"
+  "pageNotFound": "Страница не найдена",
+  "unexpectedError": "unexpectedError",
+  "reloadPage": "reloadPage",
+  "throwError": "throwError"
 }

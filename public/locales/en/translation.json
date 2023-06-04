@@ -5,5 +5,8 @@
   "collapse": "Collapse",
   "home": "Home",
   "mainPage": "Main Page",
-  "pageNotFound": "Page Not Found"
+  "pageNotFound": "Page Not Found",
+  "unexpectedError": "Unexpected Error",
+  "reloadPage": "Reload page",
+  "throwError": "Throw Error"
 }
