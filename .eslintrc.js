@@ -10,6 +10,12 @@ module.exports = {
     'airbnb',
   ],
   overrides: [
+    {
+      files: ['**/src/**/*.spec.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -28,7 +34,10 @@ module.exports = {
     'react/jsx-indent': [2, 4],
     'react/jsx-indent-props': [2, 4],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid', 'to'],
+    }],
     'max-len': ['error', { ignoreComments: true, code: 100 }],
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
