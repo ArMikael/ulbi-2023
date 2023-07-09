@@ -8,5 +8,6 @@
   "pageNotFound": "Page Not Found",
   "unexpectedError": "Unexpected Error",
   "reloadPage": "Reload page",
-  "throwError": "Throw Error"
+  "throwError": "Throw Error",
+  "modalContent": "Modal Content"
 }
