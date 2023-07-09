@@ -25,7 +25,7 @@ jobs:
       - name: Linting TypeScript
         run: npm run lint:ts
       - name: Linting CSS
-        run: npm run lint:css
+        run: npm run lint:scss
       - name: Unit Testing
         run: npm run test:unit
 #     - name: Storybook
