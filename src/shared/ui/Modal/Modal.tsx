@@ -1,4 +1,6 @@
-import React, { ReactNode } from 'react';
+import React, {
+  ReactNode, useCallback, useEffect, useRef, useState,
+} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import classes from './Modal.module.scss';
 
@@ -9,6 +11,8 @@ interface ModalProps {
     onClose?: () => void;
 }
 
+const ANIMATION_DELAY = 300;
+
 export const Modal = (props: ModalProps) => {
   const {
     className,
@@ -17,9 +21,17 @@ export const Modal = (props: ModalProps) => {
     onClose,
   } = props;
 
+  const [isClosing, setIsClosing] = useState(false);
+
+  const timeRef = useRef<ReturnType<typeof setTimeout>>();
+
   const closeHandler = () => {
     if (onClose) {
-      onClose();
+      setIsClosing(true);
+      timeRef.current = setTimeout(() => {
+        onClose();
+        setIsClosing(false);
+      }, ANIMATION_DELAY);
     }
   };
 
@@ -27,8 +39,26 @@ export const Modal = (props: ModalProps) => {
     e.stopPropagation();
   };
 
+  const onKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      closeHandler();
+    }
+  }, [closeHandler]);
+
+  useEffect(() => {
+    if (isOpen) {
+      window.addEventListener('keydown', onKeyDown);
+    }
+
+    return () => {
+      clearTimeout(timeRef.current);
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [isOpen, onKeyDown]);
+
   const mods: Record<string, boolean> = {
     [classes.opened]: isOpen,
+    [classes.isClosing]: isClosing,
   };
 
   return (
