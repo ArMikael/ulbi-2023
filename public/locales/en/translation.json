@@ -9,5 +9,6 @@
   "unexpectedError": "Unexpected Error",
   "reloadPage": "Reload page",
   "throwError": "Throw Error",
-  "modalContent": "Modal Content"
+  "modalContent": "Modal Content",
+  "login": "login"
 }

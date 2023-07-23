@@ -8,5 +8,6 @@
   "pageNotFound": "Страница не найдена",
   "unexpectedError": "unexpectedError",
   "reloadPage": "reloadPage",
-  "throwError": "throwError"
+  "throwError": "throwError",
+  "login": "login"
 }

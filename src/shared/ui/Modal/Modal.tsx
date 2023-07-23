@@ -2,6 +2,7 @@ import React, {
   ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Portal } from 'shared/ui/Portal/Portal';
 import classes from './Modal.module.scss';
 
 interface ModalProps {
@@ -62,15 +63,17 @@ export const Modal = (props: ModalProps) => {
   };
 
   return (
-      <div className={classNames(classes.Modal, mods, [className])}>
-          <div className={classes.overlay} onClick={closeHandler}>
-              <div
-                  className={classes.content}
-                  onClick={onContentClick}
-              >
-                  {children}
+      <Portal>
+          <div className={classNames(classes.Modal, mods, [className])}>
+              <div className={classes.overlay} onClick={closeHandler}>
+                  <div
+                      className={classes.content}
+                      onClick={onContentClick}
+                  >
+                      {children}
+                  </div>
               </div>
           </div>
-      </div>
+      </Portal>
   );
 };
