@@ -4,7 +4,13 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'plugin:i18next/recommended', 'airbnb', 'plugin:storybook/recommended', 'plugin:storybook/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:i18next/recommended',
+    'airbnb',
+    'plugin:storybook/recommended',
+    'plugin:storybook/recommended',
+  ],
   overrides: [{
     files: ['**/src/**/*.spec.{ts,tsx}'],
     rules: {
@@ -19,7 +25,12 @@ module.exports = {
     ecmaVersion: '2020',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+  ],
   rules: {
     'react/jsx-indent': [2, 4],
     'react/jsx-indent-props': [2, 4],
@@ -47,6 +58,8 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,

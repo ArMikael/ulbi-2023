@@ -25,7 +25,7 @@ export const Modal = (props: ModalProps) => {
 
   const timeRef = useRef<ReturnType<typeof setTimeout>>();
 
-  const closeHandler = () => {
+  const closeHandler = useCallback(() => {
     if (onClose) {
       setIsClosing(true);
       timeRef.current = setTimeout(() => {
@@ -33,7 +33,7 @@ export const Modal = (props: ModalProps) => {
         setIsClosing(false);
       }, ANIMATION_DELAY);
     }
-  };
+  }, [onClose]);
 
   const onContentClick = (e: React.MouseEvent) => {
     e.stopPropagation();
