@@ -7,7 +7,7 @@ export const ThemeDecorator = (Story: Story, context: StoryContext) => {
   const { globals: { theme } } = context;
 
   return (
-      <ThemeProvider>
+      <ThemeProvider initialTheme={theme}>
           <div className={classNames('app', theme)}>
               <Story />
           </div>

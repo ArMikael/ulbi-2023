@@ -36,6 +36,7 @@ const Navbar = ({ className }: NavbarProps) => {
                   {t('login')}
               </Button>
 
+              {/* eslint-disable-next-line i18next/no-literal-string */}
               <Modal isOpen={isAuthModal} onClose={onToggleModal}>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quam.
               </Modal>
